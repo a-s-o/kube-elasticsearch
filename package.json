@@ -1,0 +1,49 @@
+{
+  "name": "kube-elasticsearch",
+  "version": "1.0.0",
+  "description": "Elasticsearch microservice for your kube cluster using Docker",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "setup": "node tasks/setup",
+    "postinstall": "npm run setup",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bluebird": "^2.10.2",
+    "exit-hook": "^1.1.1",
+    "lodash": "^3.10.1",
+    "shelljs": "^0.5.3"
+  },
+  "kube": {
+    "inputs": [],
+    "outputs": [
+      "ELASTICSEARCH_SERVICE_HOST",
+      "ELASTICSEARCH_SERVICE_PORT"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-s-o/kube-elasticsearch.git"
+  },
+  "keywords": [
+    "kube",
+    "node.js",
+    "node",
+    "microservices",
+    "micro",
+    "service",
+    "docker",
+    "container",
+    "cluster",
+    "elastic",
+    "search",
+    "elasticsearch"
+  ],
+  "author": "Amandeep",
+  "license": "MIT",
+  "homepage": "https://github.com/a-s-o/kube-elasticsearch#readme",
+  "bugs": {
+    "url": "https://github.com/a-s-o/kube-elasticsearch/issues"
+  }
+}
